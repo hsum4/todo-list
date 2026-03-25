@@ -5,6 +5,7 @@
 # Whitelist specific files and folders to track
 !.gitignore
 !src/
+!src/**
 !README.md
 !package.json
 !package-lock.json
