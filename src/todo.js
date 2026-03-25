@@ -1,6 +1,3 @@
-// todo class
-console.log("HI!!!");
-
 class Todo {
     constructor(title, description, dueDate, priority, checked = false) {
         this.id = Date.now() + Math.random().toString(36).substr(2, 9);
