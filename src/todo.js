@@ -2,8 +2,8 @@
 console.log("HI!!!");
 
 class Todo {
-    constructor(id, title, description, dueDate, priority, checked = false) {
-        this.id = this.generateId();
+    constructor(title, description, dueDate, priority, checked = false) {
+        this.id = Date.now() + Math.random().toString(36).substr(2, 9);
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
@@ -26,11 +26,6 @@ class Todo {
     toggleChecked() {
         this.checked = !this.checked;
     }
-
-    generateId() {
-        return Date.now() + Math.random().toString(36).substr(2, 9);
-    }
-
 }
 
 export default Todo;
