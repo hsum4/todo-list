@@ -11,10 +11,20 @@ class Project {
 
   setName(name) {this.name = name;}
 
-  addTodo(id) {
-
+  addTodo(todo) {
+    this.todos.push(todo);
   }
+
   removeTodo(id) {
-
+    const toBeRemovedIndex = (todo) => todo.id === id;
+    const removedIndex = this.todos.findIndex(toBeRemovedIndex);
+    if (removedIndex !== -1){
+        this.todos.splice(removedIndex, 1);    
+    }
   }
+
+  //to do: findTodo function
+
 }
+
+export default Project;
